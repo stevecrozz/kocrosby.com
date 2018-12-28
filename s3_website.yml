@@ -1,0 +1,14 @@
+s3_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
+s3_secret: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
+s3_bucket: kocrosby.com
+cloudfront_distribution_id: E1FBUJ4BD6G7PN
+max_age:
+  "assets/*": 31536000
+  "*": 300
+gzip:
+  - .html
+  - .css
+  - .md
+  - .js
+cloudfront_distribution_config:
+  http_version: http2

@@ -1,0 +1,39 @@
+---
+encoding: utf-8
+permalink: /:year/:month/:title/
+title: K.O. Crosby, DDS
+description: Dentistry for smiles
+url: https://kocrosby.com
+sass:
+  sass_dir: _sass
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - bin
+  - s3_website.yml
+  - vendor
+markdown: kramdown
+assets:
+  sources:
+    - _assets
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      author:
+        name: K.O. Crosby
+        email: "ko@kocrosby.com"
+responsive_image:
+  template: _includes/responsive-image.html
+  default_quality: 90
+  sizes:
+    - width: 200
+    - width: 300
+    - width: 600
+  base_path: static/img-full
+  output_path_format: static/img-resized/%{dirname}/%{width}-%{basename}
+plugins:
+  - jekyll-assets
+  - jekyll-responsive-image
+  - jekyll-sitemap
