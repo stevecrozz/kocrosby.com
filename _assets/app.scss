@@ -11,6 +11,7 @@
   'node_modules/bootstrap/scss/utilities/spacing',
   'node_modules/bootstrap/scss/buttons';
 
+
 $font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-serif: "Times New Roman", Times, serif;
 
@@ -52,7 +53,16 @@ h1 {
 
 h1 a { color: $dark; }
 h1 a:hover { text-decoration: none; }
-h1, h2, h3, h4, h5, h6 { word-wrap: break-word; }
+h1, h2, h3, h4, h5, h6 {
+  word-wrap: break-word;
+}
+
+.titleblock {
+  h1, h2 {
+    text-align: center;
+    width: 100%;
+  }
+}
 
 .keywords a:hover { color: white; }
 pre { margin: 0 -30px; padding: 10px; border-left: 1px solid #999; }
@@ -103,11 +113,23 @@ address {
   margin: 0;
 }
 
-.title-container {
-  position: absolute;
-  z-index: 10;
-}
-
 .bg-highlight {
   background-color: $gray-200;
+}
+
+.call-me-bar {
+  position: fixed;
+  width: 100%;
+  padding: 10px;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+
+  a {
+    float: right;
+  }
+}
+
+address {
+  white-space: pre-line;
 }

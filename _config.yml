@@ -2,7 +2,7 @@
 encoding: utf-8
 permalink: /:year/:month/:title/
 title: K.O. Crosby, DDS
-description: Dentistry for smiles
+tagline: The Dental Care _You_ Want
 url: https://kocrosby.com
 sass:
   sass_dir: _sass
