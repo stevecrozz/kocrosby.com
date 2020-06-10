@@ -1,52 +1,147 @@
 ---
 layout: default
 ---
-<div class="call-me-bar">
-  <a
-    href="tel:{{ site.data.contact.phone_number }}"
-    class="btn btn-primary btn-lg"
-    role="button">{{ site.data.contact.phone_number }}</a>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Domine|Inter">
+<div class="padded-container">
+  <h1>{{ site.title }}</h1>
+  <h3>{{ site.tagline }}</h3>
 </div>
-<div style="margin-top: 68px;">
-  <div class="container-fluid title-container">
-    <div class="row mb-3 mt-3 titleblock">
-      <h1>{{ site.title }}</h1>
-      <h2>{{ site.tagline | markdownify | remove: '<p>' | remove: '</p>' }}</h2>
+<div class="mug-container">
+  {% asset mug.png width="100%" %}
+  <div class="caption">Dr. K.O. Crosby</div>
+</div>
+<div class="padded-container">
+  <div class="text-center">
+    <div class="make-an-appointment">
+      <div>
+        <a
+          href="tel:{{ site.data.contact.phone_number }}"
+          class="btn btn-primary btn-lg"
+          role="button">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 15.92V18.92C21.0011 19.1985 20.9441 19.4742 20.8325 19.7294C20.7209 19.9845 20.5573 20.2136 20.3521 20.4019C20.1468 20.5901 19.9046 20.7335 19.6407 20.8227C19.3769 20.9119 19.0974 20.9451 18.82 20.92C15.7428 20.5856 12.787 19.5342 10.19 17.85C7.77382 16.3147 5.72533 14.2662 4.18999 11.85C2.49997 9.24121 1.44824 6.271 1.11999 3.18001C1.095 2.90347 1.12787 2.62477 1.21649 2.36163C1.30512 2.09849 1.44756 1.85669 1.63476 1.65163C1.82196 1.44656 2.0498 1.28271 2.30379 1.17053C2.55777 1.05834 2.83233 1.00027 3.10999 1.00001H6.10999C6.5953 0.995229 7.06579 1.16708 7.43376 1.48354C7.80173 1.79999 8.04207 2.23945 8.10999 2.72001C8.23662 3.68007 8.47144 4.62273 8.80999 5.53001C8.94454 5.88793 8.97366 6.27692 8.8939 6.65089C8.81415 7.02485 8.62886 7.36812 8.35999 7.64001V7.64001C8.21174 7.78826 8.13762 7.86238 8.06025 7.96222C7.61251 8.54001 7.53654 9.51126 7.889 10.1516C7.9499 10.2623 7.98776 10.3143 8.06347 10.4183C9.04554 11.7673 10.2327 12.9545 11.5817 13.9365C11.6857 14.0122 11.7377 14.0501 11.8484 14.111C12.4887 14.4635 13.46 14.3875 14.0378 13.9397C14.1376 13.8624 14.2117 13.7883 14.36 13.64V13.64C14.6319 13.3711 14.9751 13.1859 15.3491 13.1061C15.7231 13.0263 16.1121 13.0555 16.47 13.19C17.3773 13.5286 18.3199 13.7634 19.28 13.89C19.7658 13.9585 20.2094 14.2032 20.5265 14.5775C20.8437 14.9518 21.0122 15.4296 21 15.92Z" stroke="white" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+
+          <span>Make an Appointment</span>
+        </a>
+      </div>
     </div>
   </div>
-  <div class="container-fluid">
-    <div class="row mb-3 d-flex justify-content-around align-items-center bg-highlight">
-      <address class="m-3">K.O. Crosby, DDS
-        6079 N Fresno St #105
-        Fresno, CA 93710
+</div>
+<div class="padded-container">
+  <h2>We Will Take Good Care of You</h2>
+</div>
+<div class="padded-container">
+  <table class="contact-info">
+    <tr>
+      <td>
+        <div class="ellipse">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 16.92V19.92C22.0011 20.1985 21.9441 20.4742 21.8325 20.7294C21.7209 20.9845 21.5573 21.2136 21.3521 21.4019C21.1468 21.5901 20.9046 21.7335 20.6407 21.8227C20.3769 21.9119 20.0974 21.9451 19.82 21.92C16.7428 21.5856 13.787 20.5342 11.19 18.85C8.77382 17.3147 6.72533 15.2662 5.18999 12.85C3.49997 10.2412 2.44824 7.271 2.11999 4.18001C2.095 3.90347 2.12787 3.62477 2.21649 3.36163C2.30512 3.09849 2.44756 2.85669 2.63476 2.65163C2.82196 2.44656 3.0498 2.28271 3.30379 2.17053C3.55777 2.05834 3.83233 2.00027 4.10999 2.00001H7.10999C7.5953 1.99523 8.06579 2.16708 8.43376 2.48354C8.80173 2.79999 9.04207 3.23945 9.10999 3.72001C9.23662 4.68007 9.47144 5.62273 9.80999 6.53001C9.94454 6.88793 9.97366 7.27692 9.8939 7.65089C9.81415 8.02485 9.62886 8.36812 9.35999 8.64001L8.08999 9.91001C9.51355 12.4136 11.5864 14.4865 14.09 15.91L15.36 14.64C15.6319 14.3711 15.9751 14.1859 16.3491 14.1061C16.7231 14.0263 17.1121 14.0555 17.47 14.19C18.3773 14.5286 19.3199 14.7634 20.28 14.89C20.7658 14.9585 21.2094 15.2032 21.5265 15.5775C21.8437 15.9518 22.0122 16.4296 22 16.92Z" stroke="#282C47" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </td>
+      <td class="dd">{{ site.data.contact.phone_number }}</td>
+    </tr>
+    <tr>
+      <td>
+        <div class="ellipse">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="#282C47" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M22 6L12 13L2 6" stroke="#282C47" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </td>
+      <td class="dd">
+        <address class="m-3">K.O. Crosby, DDS
+          6079 N Fresno St #105
+          Fresno, CA 93710
+        </address>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="ellipse">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#282C47" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 14C8 14 9.5 16 12 16C14.5 16 16 14 16 14" stroke="#282C47" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 9H9.01" stroke="#282C47" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 9H15.01" stroke="#282C47" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </td>
+      <td class="dd">
         <a href="mailto:smiles@kocrosby.com">smiles@kocrosby.com</a>
-      </address>
-    </div>
-    <div class="row">
-      <p style="text-align: center; width: 100%">
-        We will take good care of you.
-      </p>
-    </div>
-    <div class="row mb-3">
-      <iframe
-         class="map"
-         height="450"
-         frameborder="0"
-         style="border:0"
-         src="https://www.google.com/maps/embed/v1/place?q=K.O.+Crosby+DDS&amp;key=AIzaSyCvu1mYYjvr_rtySZr0dC6YdvexdExRXfo"
-         allowfullscreen>
-      </iframe>
-    </div>
-    <div class="row">
-      <p
-        class="mb-3"
-        style="text-align: center; width: 100%">
-        You shouldn't have to wonder if you can get
-      </p>
-      <h2
-        class="mb-3"
-        style="text-align: center; width: 100%">
-        {{ site.tagline | markdownify | remove: '<p>' | remove: '</p>' }}</h2>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div>
+  <iframe
+     class="map"
+     height="450"
+     width="100%"
+     frameborder="0"
+     style="border:0"
+     src="https://www.google.com/maps/embed/v1/place?q=K.O.+Crosby+DDS&amp;key=AIzaSyCvu1mYYjvr_rtySZr0dC6YdvexdExRXfo"
+     allowfullscreen>
+  </iframe>
+</div>
+
+<div class="padded-container results-you-like">
+  <h2>Results You Like</h2>
+  <table>
+    <tr>
+      <td><div class="check"></div></td>
+      <td>An Attractive Smile</td>
+    </tr>
+    <tr>
+      <td><div class="check"></div></td>
+      <td>More Confident Eating</td>
+    </tr>
+    <tr>
+      <td><div class="check"></div></td>
+      <td>Confident Speaking</td>
+    </tr>
+    <tr>
+      <td><div class="check"></div></td>
+      <td>Nice Breath</td>
+    </tr>
+  </table>
+</div>
+
+<div class="padded-container steps-to-confidence">
+  <h2>Your Steps to Confidence</h2>
+  <p><span class="ellipse">1</span></p>
+  <p class="highlight">Listen</p>
+  <p>We listen to your concerns.</p>
+
+  <p><span class="ellipse">2</span></p>
+  <p class="highlight">Look</p>
+  <p>Visual exam, x-rays, and photographs.</p>
+
+  <p><span class="ellipse">3</span></p>
+  <p class="highlight">You Choose</p>
+  <p>You decide on treatment options.</p>
+</div>
+
+
+<div class="footer">
+  <p>We will take good care of you.</p>
+  <div class="make-an-appointment">
+    <div>
+      <a
+        href="tel:{{ site.data.contact.phone_number }}"
+        class="btn btn-primary btn-lg"
+        role="button">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21 15.92V18.92C21.0011 19.1985 20.9441 19.4742 20.8325 19.7294C20.7209 19.9845 20.5573 20.2136 20.3521 20.4019C20.1468 20.5901 19.9046 20.7335 19.6407 20.8227C19.3769 20.9119 19.0974 20.9451 18.82 20.92C15.7428 20.5856 12.787 19.5342 10.19 17.85C7.77382 16.3147 5.72533 14.2662 4.18999 11.85C2.49997 9.24121 1.44824 6.271 1.11999 3.18001C1.095 2.90347 1.12787 2.62477 1.21649 2.36163C1.30512 2.09849 1.44756 1.85669 1.63476 1.65163C1.82196 1.44656 2.0498 1.28271 2.30379 1.17053C2.55777 1.05834 2.83233 1.00027 3.10999 1.00001H6.10999C6.5953 0.995229 7.06579 1.16708 7.43376 1.48354C7.80173 1.79999 8.04207 2.23945 8.10999 2.72001C8.23662 3.68007 8.47144 4.62273 8.80999 5.53001C8.94454 5.88793 8.97366 6.27692 8.8939 6.65089C8.81415 7.02485 8.62886 7.36812 8.35999 7.64001V7.64001C8.21174 7.78826 8.13762 7.86238 8.06025 7.96222C7.61251 8.54001 7.53654 9.51126 7.889 10.1516C7.9499 10.2623 7.98776 10.3143 8.06347 10.4183C9.04554 11.7673 10.2327 12.9545 11.5817 13.9365C11.6857 14.0122 11.7377 14.0501 11.8484 14.111C12.4887 14.4635 13.46 14.3875 14.0378 13.9397C14.1376 13.8624 14.2117 13.7883 14.36 13.64V13.64C14.6319 13.3711 14.9751 13.1859 15.3491 13.1061C15.7231 13.0263 16.1121 13.0555 16.47 13.19C17.3773 13.5286 18.3199 13.7634 19.28 13.89C19.7658 13.9585 20.2094 14.2032 20.5265 14.5775C20.8437 14.9518 21.0122 15.4296 21 15.92Z" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+        <span>Make an Appointment Today</span>
+      </a>
     </div>
   </div>
+  <p>&copy; K.O. Crosby, 2020 All rights reserved</p>
 </div>
