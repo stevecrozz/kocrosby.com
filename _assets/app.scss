@@ -39,6 +39,7 @@ body {
   padding: 11px;
   border-radius: 50px;
   display: inline-block;
+  line-height: 27px;
 }
 
 .contact-info {
@@ -318,7 +319,8 @@ address {
   .footer {
     .copyright {
       margin: 40px 0 0 10px;
-      text-align: left;
+      text-align: center;
+      font-size: 14px;
     }
     .primary {
       display: table;
