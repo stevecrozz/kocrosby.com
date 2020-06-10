@@ -46,6 +46,11 @@ body {
 
   a {
     text-decoration: none;
+    color: $light-gray;
+  }
+
+  address {
+    font-style: normal;
   }
 }
 
@@ -135,7 +140,7 @@ h2 {
 
 h3 {
   margin: 2px;
-  font-family: $font-family-serif;
+  font-family: $font-family-sans-serif;
   color: $light-gray;
   text-align: center;
   font-size: 14px;
@@ -164,6 +169,7 @@ address {
   margin-top: 20px;
 
   table {
+    border-spacing: 0;
     margin: 10px auto;
   }
 
@@ -220,3 +226,121 @@ address {
     path { stroke: $dark-background; }
   }
 }
+
+.map-container {
+  height: 450px;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    position: relative;
+    max-width: 1024px;
+    margin: auto;
+    padding-top: 140px;
+  }
+  .content {
+    position: relative;
+  }
+  .mug-container {
+    width: 400px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  h1 {
+    font-size: 34px;
+    line-height: 34px;
+    font-size: 38px;
+    margin-bottom: 10px;
+  }
+  h2 {
+    margin: 0;
+  }
+  h3 {
+    font-size: 17px;
+    line-height: 21px;
+  }
+  .primary-block {
+    padding-top: 0;
+
+    h1, h2, h3 {
+      text-align: left;
+    }
+    h2 {
+      font-size: 15px;
+      text-align: left;
+    }
+  }
+  .map-container {
+    width: 330px;
+    height: 300px;
+    margin: 24px;
+    position: absolute;
+    z-index: 3;
+    margin-top: -80px;
+  }
+  .contact-block {
+    margin-bottom: 103px;
+  }
+  .make-an-appointment-container {
+    position: absolute;
+    top: -100px;
+    right: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .title-container {
+    margin-bottom: 30px;
+  }
+  .fancy-rectangle {
+    width: 400px;
+    height: 664px;
+    background-color: $very-light-blue;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .make-an-appointment-container {
+    margin-right: 40px;
+  }
+  .mug-container {
+    margin-right: 40px;
+  }
+  .steps-to-confidence {
+    h2 { margin-top: 60px; }
+    p { font-size: 14px; }
+  }
+  .steps-to-confidence .steps {
+    display: flex;
+    justify-content: space-around;
+  }
+  .footer {
+    .copyright {
+      margin: 40px 0 0 10px;
+      text-align: left;
+    }
+    .primary {
+      display: table;
+      margin: auto;
+      p {
+        padding-right: 50px;
+      }
+
+      div, p {
+        display: table-cell;
+      }
+    }
+  }
+
+  .results-you-like > div {
+    margin-left: 100px;
+  }
+
+  @media (max-width: 849px) {
+    .mug-container { width: 300px; }
+    .fancy-rectangle { width: 300px; }
+    .results-you-like { margin-top: 350px; }
+  }
+}
+
